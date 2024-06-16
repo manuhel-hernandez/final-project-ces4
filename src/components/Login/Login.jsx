@@ -15,7 +15,7 @@ function Login() {
     <Grid container justifyContent="center" alignContent="center" sx={{ minHeight: "50vh" }}>
       <Card sx={{ width: 450, height: "auto", boxShadow: "none" }}>
         <CardContent sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
-          <Typography variant="h4" textAlign="center" component="div">
+          <Typography variant="h4" textAlign="center" component="div" sx={{ color: "darkcyan" }}>
             Iniciar sesión
           </Typography>
           <FormControl fullWidth>
@@ -28,7 +28,11 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </FormControl>
-          <Button sx={{ textTransform: "none" }} variant="text" onClick={handleLogin}>
+          <Button 
+            sx={{ mt: 2, textTransform: "none", background: "darkcyan", color: "white", 
+              '&:hover': {background: 'rgb(72, 179, 179)'} 
+            }} variant="text" onClick={handleLogin}
+          >
             Aceptar
           </Button>
         </CardContent>

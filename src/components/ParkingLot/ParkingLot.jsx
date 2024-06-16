@@ -107,7 +107,8 @@ function ParkingLot() {
                   <StyledTableCell align="center">{`${space.vehicle.entryTime}`}</StyledTableCell>
                   <StyledTableCell align="center">
                     <Button
-                      sx={{ mt: 2, textTransform: "none", margin: "0", background: "darkcyan" }} variant="contained"
+                      sx={{ mt: 2, textTransform: "none", margin: "0", background: "darkcyan", '&:hover': {background: 'rgb(72, 179, 179)'}}}
+                      variant="contained"
                       onClick={() => handleElimiarCelda(space.number)}
                     >
                       Dar salida

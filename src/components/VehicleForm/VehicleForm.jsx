@@ -8,7 +8,7 @@ import {
 function VehicleForm() {
   const { addVehicle } = useVehicle();
 
-  const [vehicleType, setVehicleType] = useState("");
+  const [vehicleType, setVehicleType] = useState("car");
   const [licensePlate, setLicensePlate] = useState("");
   const [model, setModel] = useState("");
   const [brand, setBrand] = useState("");
@@ -43,6 +43,7 @@ function VehicleForm() {
     if ( !licensePlate || !brand || (!cylinder && vehicleType === "moto") || (!model && vehicleType === "car") || !idDocument)
     {
       toast.warning("Todos los campos son obligatorios");
+      return;
     } else if (vehicleType == "moto") {
       const motoPlateRegex = /^[A-Z]{3}\d{2}[A-Z]$/;
       if (!motoPlateRegex.test(licensePlate.toUpperCase())) {
@@ -194,7 +195,8 @@ function VehicleForm() {
               </Select>
             </FormControl>
           )}
-          <Button sx={{ mt: 2, textTransform: "none", background: "darkcyan" }} variant="contained" onClick={handleAddVehicle}>
+          <Button sx={{ mt: 2, textTransform: "none", background: "darkcyan", '&:hover': {background: 'rgb(72, 179, 179)'} }} 
+          variant="contained" onClick={handleAddVehicle}>
             Registrar
           </Button>
         </CardContent>

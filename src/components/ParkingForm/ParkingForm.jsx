@@ -131,7 +131,7 @@ function ParkingForm() {
                   ) : (
                     vehicleOptions.map((vehicle, index) => (
                       <MenuItem key={index} value={vehicle.plate}>
-                        {vehicle.type} - {vehicle.document} - {vehicle.plate}
+                        {`${vehicle.type === "car" ? "Carro" : "Moto"} `} - {vehicle.document} - {vehicle.plate}
                       </MenuItem>
                     ))
                   )}
@@ -175,7 +175,7 @@ function ParkingForm() {
             </Grid>
           </Grid>
           <Button
-            sx={{ mt: 2, textTransform: "none", background: "darkcyan" }}
+            sx={{ mt: 2, textTransform: "none", background: "darkcyan", '&:hover': {background: 'rgb(72, 179, 179)'}}}
             variant="contained"
             onClick={handleParkVehicle}
           >
