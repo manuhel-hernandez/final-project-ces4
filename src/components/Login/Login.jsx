@@ -12,7 +12,7 @@ function Login() {
   };
 
   return (
-    <Grid container justifyContent="center" alignContent="center" sx={{ minHeight: "50vh" }}>
+    <Grid container justifyContent="center" alignContent="center" sx={{ minHeight: "100vh" }}>
       <Card sx={{ width: 450, height: "auto", boxShadow: "none" }}>
         <CardContent sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
           <Typography variant="h4" textAlign="center" component="div" sx={{ color: "darkcyan" }}>
