@@ -3,17 +3,17 @@ import { useState } from "react";
 import { useUser } from "../../context/UserContext/UserContext";
 
 function Login() {
-  const { userLogin } = useUser();
+  const { login } = useUser();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    userLogin(userName, password);
+    login(userName, password);
   };
 
   return (
-    <Grid container justifyContent="center" alignContent="center" sx={{ minHeight: "100vh" }}>
-      <Card sx={{ width: 600, height: "auto", boxShadow: "none" }}>
+    <Grid container justifyContent="center" alignContent="center" sx={{ minHeight: "50vh" }}>
+      <Card sx={{ width: 450, height: "auto", boxShadow: "none" }}>
         <CardContent sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
           <Typography variant="h4" textAlign="center" component="div">
             Iniciar sesión
@@ -28,8 +28,8 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </FormControl>
-          <Button variant="text" onClick={handleLogin}>
-            Iniciar Sesión
+          <Button sx={{ textTransform: "none" }} variant="text" onClick={handleLogin}>
+            Aceptar
           </Button>
         </CardContent>
       </Card>

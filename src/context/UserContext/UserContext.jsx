@@ -6,14 +6,14 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null); 
 
-  const localUser = "juanitaporfin@terminamos.com";
+  const localUser = "juanita123";
   const localPassword = "12345678";
 
   useEffect(() => {}, []);
 
   const login = (username, password) => {
     if (localUser == username && localPassword == password) {
-      window.location.href = "/#/dashboard";
+      window.location.href = "/#/home";
     } else {
       toast.warning("¡Usuario o contraseña incorrecta!");
     }
